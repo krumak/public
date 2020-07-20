@@ -1,11 +1,21 @@
 struct Foo{
-    fooish;
+    int foo1, foo2, foo3;
+    std::string foo4[8];
 };
-struct Curl{
-    std::vector<Foo> foo;
+struct FooA{
+    std::vector<Foo> fooA;
+};
+struct FooB{
+    std::vector<FooA> fooB;
 };
 
-Curl size++(Curl curl){
-    curl.foo.resize(curl.foo.size() + 1);
-    return curl;
+struct size++(struct thing){
+    thing.resize(thing.size() + 1);
+    return thing;
+}
+
+void whatever(){
+    FooB fooB = fooData;
+    fooB.fooA[i].size++();
+    fooB.fooA[i].foo4[j] = "fooishness";
 }
